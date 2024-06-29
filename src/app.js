@@ -28,11 +28,9 @@ import { errorMiddleware } from "./middlewares/error.middleware.js";
 app.use(errorMiddleware);
 
 // Create a new router for the root route
-const router = express.Router();
-router.get("/", (req, res) => {
+app.get("/", (req, res) => {
     res.send("App is running..");
 });
-app.use("/.netlify/functions/app", router);
 
 // Export app and handler
 export const handler = serverless(app);

@@ -36,3 +36,6 @@ yarn.lock
 # Build directories
 dist/
 build/
+
+# Local Netlify folder
+.netlify
