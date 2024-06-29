@@ -8,7 +8,7 @@
     "build": "nodemon --experimental-modules ./src/index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "author": "dhyan",
   "license": "ISC",
   "dependencies": {
     "bcrypt": "^5.1.1",
