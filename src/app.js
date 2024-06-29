@@ -2,7 +2,6 @@
 import express from 'express';
 import cors from 'cors';
 import cookieParser from "cookie-parser";
-import serverless from 'serverless-http';
 
 const app = express();
 
@@ -33,5 +32,4 @@ app.get("/", (req, res) => {
 });
 
 // Export app and handler
-export const handler = serverless(app);
 export default app;
