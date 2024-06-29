@@ -6,7 +6,9 @@ import cookieParser from "cookie-parser";
 const app = express();
 
 app.use(cors({
-    origin: process.env.CORS_ORIGIN
+    origin: process.env.CORS_ORIGIN,
+    methods: ['GET', 'POST', 'PUT', 'DELETE'],
+    credentials: true,
 }));
 
 app.use(express.json({ limit: "16kb" })); // Json data limit
@@ -27,8 +29,8 @@ import { errorMiddleware } from "./middlewares/error.middleware.js";
 app.use(errorMiddleware);
 
 // Create a new router for the root route
-app.get("/", (req, res) => {
-    res.send("App is running..");
+app.post("/", (req, res) => {
+    res.send(`App is running..${req.body.name}`);
 });
 
 // Export app and handler
