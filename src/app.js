@@ -6,7 +6,7 @@ import cookieParser from "cookie-parser";
 const app = express();
 
 app.use(cors({
-    origin: 'https://react-js-state-khzb3fref-dhyan-rais-projects.vercel.app',
+    origin: 'https://react-js-state-inuq6z2rp-dhyan-rais-projects.vercel.app/',
     methods: ['GET', 'POST', 'PUT', 'DELETE'],
     credentials: true,
 }));
