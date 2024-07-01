@@ -90,6 +90,8 @@ export const signIn = asyncHandler(async (req, res, next) => {
         // maxAge: 3600000, // Expiry time in milliseconds (e.g., 1 hour)
     };
 
+    console.log(accessToken, refreshToken);
+
     res
         .status(200)
         .cookie("accessToken", accessToken, cookieOptions)
