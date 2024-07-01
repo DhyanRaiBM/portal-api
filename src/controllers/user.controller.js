@@ -86,7 +86,7 @@ export const signIn = asyncHandler(async (req, res, next) => {
     const cookieOptions = {
         secure: true, // Only transmit cookie over HTTPS
         httpOnly: true, // Cookie is not accessible via client-side scripts
-        sameSite: 'Strict', // Restrict cookie to same site requests
+        sameSite: 'none', // Restrict cookie to same site requests
         // maxAge: 3600000, // Expiry time in milliseconds (e.g., 1 hour)
     };
 
@@ -119,7 +119,7 @@ export const googleSignIn = asyncHandler(async (req, res) => {
     const cookieOptions = {
         secure: true, // Only transmit cookie over HTTPS
         httpOnly: true, // Cookie is not accessible via client-side scripts
-        sameSite: 'Strict', // Restrict cookie to same site requests
+        sameSite: 'none', // Restrict cookie to same site requests
         // maxAge: 3600000, // Expiry time in milliseconds (e.g., 1 hour)
     };
 
