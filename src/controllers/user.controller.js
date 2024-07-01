@@ -119,8 +119,8 @@ export const googleSignIn = asyncHandler(async (req, res) => {
     const cookieOptions = {
         secure: true, // Only transmit cookie over HTTPS
         httpOnly: true, // Cookie is not accessible via client-side scripts
-        sameSite: 'none', // Restrict cookie to same site requests
-        // maxAge: 3600000, // Expiry time in milliseconds (e.g., 1 hour)
+        sameSite: 'none', // Allows the cookie to be sent with cross-site requests
+        maxAge: 3600000, // Expiry time in milliseconds (e.g., 1 hour)
     };
 
     if (user) {
