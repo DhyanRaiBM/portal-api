@@ -30,6 +30,8 @@ export const signUp = asyncHandler(async (req, res, next) => {
         throw new ApiError(400, "All fields are required!!")
     }
 
+    console.log(username, email, password);
+
     const existedUser = await User.findOne({
         $or: [{ username }, { email }]
     })
